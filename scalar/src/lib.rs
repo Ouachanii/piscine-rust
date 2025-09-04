@@ -19,7 +19,7 @@ pub fn quo(x: i32, y: i32) -> i32 {
 }
 
 pub fn rem(x: i32, y: i32) -> i32 {
-    if b != 0 {
+    if y != 0 {
         return x % y;
     }
     return 0;
