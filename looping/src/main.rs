@@ -1,9 +1,9 @@
 use std::io;
 
 fn main() {
-    let riddle = "What comes once in a minute, twice in a moment, but never in a thousand years?";
+    let riddle = "I am the beginning of the end, and the end of time and space. I am essential to creation, and I surround every place. What am I?";
 
-    let answer = "m";
+    let answer = "The letter e";
     let mut tries = 0;
 
     loop {
@@ -15,8 +15,8 @@ fn main() {
         let input = input.trim().to_lowercase();
         tries += 1;
 
-        if input == answer {
-            println!("Number of trials: {}", tries);
+        if input == answer.trim().to_lowercase() {
+            println!("{}", tries);
             break;
         }
     }
