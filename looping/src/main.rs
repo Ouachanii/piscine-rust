@@ -16,7 +16,7 @@ fn main() {
         tries += 1;
 
         if input == answer.trim().to_lowercase() {
-            println!("{}", tries);
+            println!("number of tries: {}", tries);
             break;
         }
     }
