@@ -12,7 +12,7 @@ impl Suit {
 
     pub fn random() -> Suit {
 
-        match rand::thread_rng().gen_range(1..=4) {
+        match rand::rng().random_range(1..=4) {
 
             1 => Suit::Heart,
             2 => Suit::Diamond,
@@ -50,7 +50,7 @@ impl Rank {
 
     pub fn random() -> Rank {
 
-        match rand::thread_rng().gen_range(1..=13) {
+        match rand::rng().random_range(1..=13) {
 
             1 => Rank::Ace,
             11 => Rank::Jack,
@@ -76,7 +76,8 @@ impl Rank {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
+
 pub struct Card {
 
     pub suit: Suit,
@@ -87,5 +88,5 @@ pub struct Card {
 pub fn winner_card(card: &Card) -> bool {
 
     card.rank == Rank::Ace && card.suit == Suit::Spade
-    
+
 }
