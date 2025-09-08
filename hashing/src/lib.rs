@@ -35,7 +35,7 @@ pub fn mode(list: &[i32]) -> i32 {
         *counts.entry(num).or_insert(0) += 1;
     }
 
-    return *counts
+    return counts
         .iter()
         .max_by_key(|&(_, count)| count)
         .map(|(&num, _)| num)
