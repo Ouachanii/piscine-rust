@@ -15,8 +15,10 @@ impl Point {
 #[derive(Debug, Clone, Copy)]
 
 pub struct Circle {
+
     pub center: Point,
     pub radius: f64,
+    
 }
 
 impl Circle {
