@@ -10,12 +10,14 @@ pub struct Three {
 pub struct Four {
     pub fourth_layer: Option<u16>,
 }
+impl One {
+    pub fn get_fourth_layer(self) -> Option<u16> {
 
-pub fn get_fourth_layer(self) -> Option<u16> {
+        self.first_layer?.second_layer?.third_layer?.fourth_layer
 
-    self.first_layer?.second_layer?.third_layer?.fourth_layer
-
+    }
 }
+
 
 // impl One {
 //     pub fn get_fourth_layer(self) -> Option<u16> {
