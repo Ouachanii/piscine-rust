@@ -1,20 +1,20 @@
-#[derive(Debug)]
-pub struct Message {
-    pub content: String,
-    pub author: String,
-}
+// #[derive(Debug)]
+// pub struct Message {
+//     pub content: String,
+//     pub author: String,
+// }
 
-impl Message {
-    pub fn new(content: String, author: String) -> Self {
-        Self { content, author }
-    }
-}
+// impl Message {
+//     pub fn new(content: String, author: String) -> Self {
+//         Self { content, author }
+//     }
+// }
 
 
-pub fn check_ms(message: &Message) -> Result<&str, &str> {
-    if message.content.is_empty() || message.content.contains("stupid") {
+pub fn check_ms(message: &str) -> Result<&str, &str> {
+    if message.is_empty() || message.contains("stupid") {
         Err("ERROR: illegal")
     } else {
-        Ok(&message.content)
+        Ok(&message)
     }
 }
