@@ -9,13 +9,16 @@ pub struct Flag<'a> {
 
 impl<'a> Flag<'a> {
     pub fn opt_flag(name: &'a str, d: &'a str) -> Self {
+
         let short = format!("-{}", &name.chars().next().unwrap());
         let long = format!("--{}", name);
+        
         Self {
             short_hand: short,
             long_hand: long,
             desc: d,
         }
+
     }
 }
 
